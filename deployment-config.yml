@@ -29,8 +29,6 @@ spec:
       containers:
         - name: vin-decoder
           image: kbrederj/devops-practice:vin-decoder-service
-      imagePullSecrets:
-        - name: portus-secret
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
