@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: vin-decoder
-          image: "portus.cicd.sumelongenterprise.com/jenkins/vin-decoder/develop:latest"
+          image: kbrederj/devops-practice:breder-docker-demo
       imagePullSecrets:
         - name: portus-secret
 ---
