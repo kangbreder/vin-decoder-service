@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: vin-decoder
-          image: kbrederj/devops-practice:breder-docker-demo
+          image: kbrederj/devops-practice:vin-decoder-service
       imagePullSecrets:
         - name: portus-secret
 ---
