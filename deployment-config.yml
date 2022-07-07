@@ -29,23 +29,26 @@ spec:
       containers:
         - name: vin-decoder
           image: kbrederj/devops-practice:vin-decoder-service
+      # imagePullSecrets:
+      #   - name: portus-secret
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: vin-decoder
-  annotations:
-    kubernetes.io/ingress.class: traefik
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-spec:
-  rules:
-    - host: vin-decoder.develop.192.168.50.11.nip.io
-      http:
-        paths:
-          - backend:
-              service:
-                name: vin-decoder
-                port:
-                  number: 80
-            path: /
-            pathType: Prefix
+
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: vin-decoder
+#   annotations:
+#     kubernetes.io/ingress.class: traefik
+#     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+# spec:
+#   rules:
+#     - host: vin-decoder.develop.192.168.50.11.nip.io
+#       http:
+#         paths:
+#           - backend:
+#               service:
+#                 name: vin-decoder
+#                 port:
+#                   number: 80
+#             path: /
+#             pathType: Prefix
